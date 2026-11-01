@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Registration Page -->
+        <section class="form-box">
+            <h2>Create Account</h2>
+            <p>Register to get started</p>
+
+            <form action="#" method="post">
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname"
+                       placeholder="Enter your full name"
+                       required minlength="3">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <label for="regpassword">Password</label>
+                <input type="password" id="regpassword"
+                       name="password"
+                       placeholder="Create a password"
+                       required minlength="8">
+
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirm"
+                       name="confirm_password"
+                       placeholder="Confirm your password"
+                       required minlength="8">
+
+                <button type="submit">Register</button>
+
+                <p class="link">
+                    Already have an account?
+                    <a href="#login">Login</a>
+                </p>
+
+            </form>
+        </section>
+
+        <!-- Login Page -->
+        <section class="form-box" id="login">
+            <h2>Welcome Back</h2>
+            <p>Login to your account</p>
+
+            <form action="#" method="post">
+
+                <label for="loginemail">Email Address</label>
+                <input type="email" id="loginemail"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <label for="loginpassword">Password</label>
+                <input type="password" id="loginpassword"
+                       name="password"
+                       placeholder="Enter your password"
+                       required>
+
+                <p class="forgot">
+                    <a href="#recovery">Forgot Password?</a>
+                </p>
+
+                <button type="submit">Login</button>
+
+                <p class="link">
+                    Don't have an account?
+                    <a href="#register">Register</a>
+                </p>
+
+            </form>
+        </section>
+
+        <!-- Password Recovery Page -->
+        <section class="form-box" id="recovery">
+            <h2>Reset Password</h2>
+            <p>Enter your email to recover your account</p>
+
+            <form action="#" method="post">
+
+                <label for="recoveryemail">Email Address</label>
+                <input type="email" id="recoveryemail"
+                       name="email"
+                       placeholder="Enter registered email"
+                       required>
+
+                <button type="submit">Send Reset Link</button>
+
+                <p class="link">
+                    Remember your password?
+                    <a href="#login">Login</a>
+                </p>
+
+            </form>
+        </section>
+
+        <!-- Profile Setup Page -->
+        <section class="form-box" id="profile">
+            <h2>Setup Your Profile</h2>
+            <p>Complete your personal information</p>
+
+            <form action="#" method="post">
+
+                <label for="username">Username</label>
+                <input type="text" id="username"
+                       name="username"
+                       placeholder="Choose a username"
+                       required minlength="3">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone"
+                       name="phone"
+                       placeholder="Enter phone number"
+                       pattern="[0-9]{10}"
+                       title="Enter a 10-digit phone number"
+                       required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob"
+                       name="dob"
+                       required>
+
+                <label for="bio">About Me</label>
+                <textarea id="bio" name="bio"
+                          placeholder="Write something about yourself"
+                          rows="4" maxlength="250"></textarea>
+
+                <label for="photo">Profile Picture</label>
+                <input type="file" id="photo"
+                       name="photo"
+                       accept="image/*">
+
+                <button type="submit">Save Profile</button>
+
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
